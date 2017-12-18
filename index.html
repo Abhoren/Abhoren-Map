@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="lib/L.Control.Sidebar.css" />
+    <link rel="stylesheet" href="main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Fondamento" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
+
+    <link rel="stylesheet" href="lib/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- Easy Button source -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
+    <title>Abhoren</title>
+
+</head>
+<body>
+
+    <div id="map"></div>        
+    <div id="navinfo" class="leaflet-bottom leaflet-left">
+        <p><b>Navigation:</b></p>
+                
+        <p>Click and drag on the screen or use arrow keys to move around the map</p>
+        <p>Click a map marker to receive information about the continent</p>
+        <p>Use the scroll wheel or the + and - buttons at the top to zoom</p>
+        <p>Click the button with the information icon to open up the documentation</p>
+                
+    </div>
+        
+    <div id="sidebar-left">
+        <h1>Documentation</h1>
+        <h2 id="name-left">Conor Lilley</h2>
+        <div id="image-left"><img src="Abhoren Website/img/conorselfie.jpg" style="height:300px;width:250;"></div>
+        <h2>Technologies Used/Sources</h2>
+        <h3>Libraries</h3>
+        <p id="libraries-left">To create this interactive map I have used the leafletjs library, the jquery library, and the Leaflet-sidebar.js plugin.</p>
+        <h3>Non-JavaScript Scripts</h3>
+        <p id="scripts-left">N/A</p>
+        <h3>Extra Software</h3>
+        <p id="software-left">This site was made using Visual Studio Code and using Google Drive to write the lore</p>
+        <h3>Sources</h3>
+        <p id="sources-left"><a href = "https://github.com/Leaflet/Leaflet">Leaflet.js:</a><br><a href = "https://jquery.com">JQuery:</a><br><a href = "https://github.com/Turbo87/leaflet-sidebar">Leaflet-sidebar.js:</a></p>
+        <h2>The Process</h2>
+        <h3>Inspiration</h3>
+        <p id="inspiration-left">Much of the inspiration of this work comes from <a href ="https://loremaps.azurewebsites.net/Maps/Faerun">Loremap\'s Faerun map</a><br>A lot of ideas have been inspired from various works of fiction such as Lord of the Rings and Dungeons and Dragons.</p>
+        <h3>What I did</h3>
+        <p id="work-left">In creating this site, I have utilized Leaflet to create markers that fully read json files to fill the sidebar that opens when clicked. I also created much of the content inside the markers, including the calendar, lore for several nations, and god pantheons.</p>
+        <h3>What I learned</h3>
+        <p id="learned-left">I especially learned from this project that I should always start earlier than I think I should. This project ended up being really fun, yet challenging. I definitely enriched my understanding of javascript and how to implement javascript libraries to make something really cool. I also learned that creating lore beforehand is much easier than writing while you are placing markers.</p>
+        <h3>Struggles</h3>
+        <p id="struggles-left">I especially struggled on this project with filling a sidebar with information when the marker was clicked. After looking up tutorials that the TA sent me, I figured out on my own how to implement json files to fill the sidebars. This took me a period of a few days to work out, but once it started working, it was a relief. Another thing I struggled with on this project was creating lore on the spot for many locations, as we had not previously written about them. At the beginning we had only created lore for 5-10 markers, and I filled most of the others with lore. Finally I struggled with making the sidebars look better on mobile. For some reason, leaflet makes it very difficult to change the position of the sidebars in the CSS, and when you alter the width of the sidebars, much of the containing div of the sidebar disappears off the screen.</p>
+        <h3>Above and Beyond</h3>
+        <p id="above_and_beyond-left">The original idea was to only have a few workable markers on the map. I believe the amount of markers and lore inside of each marker really shows how much work both me and Matthew have put into this. I learned how to read in jsons instead of just hard coding a few markers. We also created markers for all the other continents that display information that is helpful to the viewer about what they can one day expect in one of those areas. All in all, I believe we did our work well, and I look forward to five more continents.</p>
+    </div>
+    <div id="sidebar-right">
+        <h1>Documentation</h1>
+        <h2 id="name-right">Matthew Paseltiner</h2>
+        <div id="image-right"><img src="Abhoren Website/img/matthewSelfie.JPG" style="height: 320px; width: 180px;"></div>
+        <h2>Technologies Used/Sources</h2>
+        <h3>Libraries</h3>
+        <p id="libraries-right">To help create this project I used the Leaflet.js library, the leaflet-sidebar javascript and the leaflet easy-button javascript plugin, and the jquery library.</p>
+        <h3>Non-JavaScript Scripts</h3>
+        <p id="scripts-right">To help create the map tilesets I found a photoshop script called the photoshop-google-maps-tile-cutter. I ran this script over my photoshop file and it created a tileset with 5 levels of zoom that could be used by leaflet.js to make a custom map.</p>
+        <h3>Extra Software</h3>
+        <p id="software-right">While working on this website I used Photoshop for the tilesets, github and github desktop for version control, google docs for the information and Visual Studio Code for all the html, css and javascript.</p>
+        <h3>Sources</h3>
+        <p id="sources-right"><a href = "https://github.com/Leaflet/Leaflet">Leaflet.js:</a><br><a href = "https://jquery.com">JQuery:</a><br><a href = "https://github.com/Turbo87/leaflet-sidebar">Leaflet-sidebar.js:</a><br><a href = "https://github.com/bramus/photoshop-google-maps-tile-cutter/">Tile Cutter</a><br><a href = "https://github.com/CliffCloud/Leaflet.EasyButton">leaflet-easybutton.js</a><br><a href="https://www.youtube.com/watch?v=EmfE9VyAYcY&t=347s">Leaflet Tutorial</a></p>
+        <h2>The Process</h2>
+        <h3>Inspiration</h3>
+        <p id="inspiration-right">In mid June of 2017 Conor, Nathan and myself started making a fantasy world based off of the Dungeons and Dragons campaign I was running. We have been writing lore and making maps for the world since then. I got the idea for this project one day when I was in the shower. I asked Conor if he wanted to make this project with me. The whole look and feel for the website was inspired by <a href ="https://loremaps.azurewebsites.net/Maps/Faerun">Loremap\'s Faerun map</a>. That's where we found the leaflet.js library and the leaflet-sidebar.js plugin that was necessary to make this project work.</p>
+        <h3>What I did</h3>
+        <p id="work-right">Most of my work was in making the tilesets for the pages. Once I got the tilesets working I was able to start adding cleaner functionality to the website. I added popup windows with brief summaries of information to each continent and major landmass on the main page and added the ability to move back and forth from the World Map to Odea. I also styled all the elements to be consistent. Finally I made the documentation page outlines and put them into two sidebars so the information was presented in a way that was similar to the rest of the website.</p>
+        <h3>What I learned</h3>
+        <p id="learned-right">I learned so much about how tilesets work and how the google maps api functions. Before this project I never thought how much work was put into just displaying a map let alone making it interactive. Before Conor and I dove into this project I knew next to nothing about javascript but now I have a much better understanding of how to implement scripts and write my own functions. Also libraries are now my best friend, without Leaflet.js this project would not have been possible.</p>
+        <h3>Struggles</h3>
+        <p id="struggles-right">I struggled on many things for this project. The first massive roadblock for me was creating the tileset. When looking over Leaflet and Mapbox's(a leaflet plugin we didn't use) documentation all I could find was either premade tilesets from google maps or tilesets that had to me made with some odd vector filetypes. Luckily I found a tutorial that lead me to the photoshop-google-maps-tile-cutter and showed me how to load up a custom tileset in Leaflet. The second big thing I struggled with was the continent popup windows on the main page. Filling them with content wasn't too bad but when I tried to get the navigation button from the main page to Odea to work my progress ground to a halt. Popup windows take a string for content which can be edited with html tags, but because it's not actually an html file I wasn't able to get a reference to the button I created from outside of the popup window. After about 4 hours of trolling forums I learned I could just add the onclick property with a method call to the button tag and then my button worked perfectly. It is worth saying that I could have just styled a link tag to look like a button and have had no issues with it but I really wanted to get it to work with a button so I could learn more javascript.</p>
+        <h3>Above and Beyond</h3>
+        <p id="above_and_beyond-right">I don't think there is too much visible above and beyond content on this website. A lot of what we learned and attempted and ultimately didn't use is what I would consider our above and beyond. I spent several hours getting a button to work where a link would have been fine just so I could get a better understanding of the Leaflet.js library. I spent many hours trolling through Leaflet.js and Leaf.js's css files just so I could learn how to style everything. And on top of all this we made the website expandable. So whenever we complete new lore and maps it is very easy to just add it in to the website. I did the best I could to make sure adding new content is as easy as possible.</p>
+    </div>
+    
+
+    <script src="lib/L.Control.Sidebar.js"></script>
+    <script src="worldMap.js"></script>
+</body>
+</html>
