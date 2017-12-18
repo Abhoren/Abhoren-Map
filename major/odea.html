@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="../../lib/L.Control.Sidebar.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fondamento" rel="stylesheet">
+    <link rel="stylesheet" href="tertiary.css"/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Odea</title>
+</head>
+<body>
+        <div id="map"></div>        
+        <div id="navinfo" class="leaflet-bottom leaflet-left">
+            <p><b>Navigation:</b></p>
+            
+            <p>Click and drag on the screen or use arrow keys to move around the map</p>
+            <p>Click a map marker to receive information about the continent</p>
+            <p>Use the scroll wheel or the + and - buttons at the top to zoom</p>
+            
+        </div>
+        <div id="sidebar">
+            <h1 id="area"></h1>
+            <div id="image"></div>
+            <h2>Geography</h2>
+            <h3> Type </h3>
+            <p id="type"></p>
+            <h3>Aliases</h3>
+            <p id="aliases"></p>
+            <h3>Region</h3>
+            <p id="region"></p>
+            <h3>Size</h3>
+            <p id="size"></p>
+            <h2> Society </h2>
+            <h3> Demonym </h3>
+            <p id="demonym"></p>
+            <h3> Races </h3>
+            <p id="races"></p>
+            <h3> Religions practiced </h3>
+            <p id="religions"></p>
+            <h2> Commerce </h2>
+            <h3> Imports </h3>
+            <p id="imports"></p>
+            <h3> Exports </h3>
+            <p id="exports"></p>
+            <h2> Politics </h2>
+            <h3> Government </h3>
+            <p id=government></p>
+            <h2> Statistics </h2>
+            <h3> Population </h3>
+            <p id="population"></p>
+            <h3> Ruler </h3>
+            <p id="ruler"></p>
+            <h3> Important People </h3>
+            <p id="vips"></p>
+            <h2> Etymology </h2>
+            <p id = "etymology"></p>
+            <h2> History </h2>
+            <p id = "history"></p>
+            <h2> Description </h2>
+            <h3> General Description </h3>
+            <p id="description"></p>
+            <h3> Landmarks </h3>
+            <p id="landmarks"></p>
+        </div>
+        
+        <script src="../../lib/L.Control.Sidebar.js"></script>
+        <script src="odea.js"></script>
+    </body>
+</html>
