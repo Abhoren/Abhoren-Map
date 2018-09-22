@@ -177,8 +177,8 @@ var documentationButton = L.easyButton("fa fa-info-circle", function(btn, map){
     loadDocumentation();
 }, "documentation").addTo(map);
 
-var leftDocumentationSiderbar = L.control.sidebar('sidebar-left', { position: 'left' });
-var rightDocumentationSidebar = L.control.sidebar('sidebar-right', { position: 'right' });
+var leftDocumentationSiderbar = L.control.sidebar('sidebar-left', { position: 'left' ,maxWidth:10});
+var rightDocumentationSidebar = L.control.sidebar('sidebar-right', { position: 'right' ,maxWidth:10});
 map.addControl(rightDocumentationSidebar);
 map.addControl(leftDocumentationSiderbar);
 
@@ -218,7 +218,7 @@ function loadContinent(index){
 }
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    var projectInformationPopup = L.popup({maxHeight: 400, minWidth: 100, maxWidth:200, className: "information-popup"})       
+    var projectInformationPopup = L.popup({maxHeight: 400, minWidth: 200, maxWidth:300, className: "information-popup"})       
         .setLatLng([-50,0])
         .setContent("<h2>Welcome to Abhoren!</h2><p>This is a magical land full of sentient cultures, massive dragons, and dangerous beasts. This project began in the Summer of 2017 between a group of friends, and has steadily grown to become what it is today. Currently, the only continent fully made explorable is the far western one, Odea. You can still click the other continents to learn what will one day exist there.</p><p>Enjoy your stay in Abhoren, and look out for pesky Gol!</p><br><br>This project is still a work in progress and was at first designed as a class project.**")
         .openOn(map);
