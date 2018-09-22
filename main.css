@@ -49,7 +49,6 @@ button:hover{
     #sidebar-left, #sidebar-right{
         background-color:#ffdead;
         color: black;
-        width:200px;
     }
     #sidebar-right{
         position:left;
@@ -63,9 +62,5 @@ button:hover{
         border-style:solid;
         border-color:#8B4513;
         border-width:1px;
-    }
-    .information-popup .leaflet-popup-content-wrapper{
-        font-size:50%;
-        width:150px;
     }
 }
