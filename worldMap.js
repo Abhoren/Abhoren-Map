@@ -177,8 +177,8 @@ var documentationButton = L.easyButton("fa fa-info-circle", function(btn, map){
     loadDocumentation();
 }, "documentation").addTo(map);
 
-var leftDocumentationSiderbar = L.control.sidebar('sidebar-left', { position: 'left' ,maxWidth:10});
-var rightDocumentationSidebar = L.control.sidebar('sidebar-right', { position: 'right' ,maxWidth:10});
+var leftDocumentationSiderbar = L.control.sidebar('sidebar-left', { position: 'left'});
+var rightDocumentationSidebar = L.control.sidebar('sidebar-right', { position: 'right'});
 map.addControl(rightDocumentationSidebar);
 map.addControl(leftDocumentationSiderbar);
 
