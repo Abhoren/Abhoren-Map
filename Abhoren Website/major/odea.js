@@ -261,7 +261,7 @@ function onMapClick(e) {
     }
 }
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    var sidebar = L.control.sidebar('sidebar', {closeButton: true,position: 'left', maxWidth: 200});
+    var sidebar = L.control.sidebar('sidebar', {closeButton: true,position: 'left', maxWidth: 10});
     map.addControl(sidebar);
 }
 else{
