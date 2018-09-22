@@ -45,7 +45,7 @@ button:hover{
     border-color:#8B4513;
     border-width:2px;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1080px){
     #sidebar-left, #sidebar-right{
         background-color:#ffdead;
         color: black;
