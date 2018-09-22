@@ -29,55 +29,123 @@ var contIcon = L.icon({
 var markers=[]; //0 = Odea, 1 = The Shattered Isles, 2 = Ucul, 3 = The Isle of Destiny, 4 = Iogos, 5 = Prelora, 6 = Isle of Ascension
 for(var i=0;i<locations.length;i++){
     if(i==0){
-        var odeaPopup = L.popup({minWidth: 100})
-            .setContent("<h2><b>Odea</b></h2><button type='button' id='toOdea' onclick='loadContinent(0)'>Explore Odea</button>");
-        marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
-        .bindPopup(odeaPopup)
-        //<button type='button' id='toOdea'>Explore Odea</button>
-        //<p><a href='major/odea.html' class='button'>Exlpore Odea</a></p>
-        .addTo(map);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var odeaPopup = L.popup({maxWidth: 150})
+                .setContent("<h2><b>Odea</b></h2><button type='button' id='toOdea' onclick='loadContinent(0)'>Explore Odea</button>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(odeaPopup)
+                .addTo(map);
+        }
+        else {
+            var odeaPopup = L.popup({minWidth: 100})
+                .setContent("<h2><b>Odea</b></h2><button type='button' id='toOdea' onclick='loadContinent(0)'>Explore Odea</button>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(odeaPopup)
+                .addTo(map);
+            
+        }
     }
     if(i==1){
-        var shatteredIslesPopup = L.popup({minWidth: 500})
-            .setContent("<h2><b>The Shattered Isles</b></h2><p>This landmass was, until recently, a solid continent. After two great wizards had a realm shaking duel the land shattered. Now the landmass is known as the Shattered Isles but nothing else is known as the residual magical energy makes exploration impossible even for the gods of this universe.</p><p>In the future when the magical energy settles a more detailed map will be created for this region.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
-        marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
-        .bindPopup(shatteredIslesPopup)
-        .addTo(map);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var shatteredIslesPopup = L.popup({maxWidth: 300})
+                .setContent("<h2><b>The Shattered Isles</b></h2><p>This landmass was, until recently, a solid continent. After two great wizards had a realm shaking duel the land shattered. Now the landmass is known as the Shattered Isles but nothing else is known as the residual magical energy makes exploration impossible even for the gods of this universe.</p><p>In the future when the magical energy settles a more detailed map will be created for this region.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(shatteredIslesPopup)
+                .addTo(map);
+        }
+        else{
+            var shatteredIslesPopup = L.popup({minWidth: 500})
+                .setContent("<h2><b>The Shattered Isles</b></h2><p>This landmass was, until recently, a solid continent. After two great wizards had a realm shaking duel the land shattered. Now the landmass is known as the Shattered Isles but nothing else is known as the residual magical energy makes exploration impossible even for the gods of this universe.</p><p>In the future when the magical energy settles a more detailed map will be created for this region.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(shatteredIslesPopup)
+                .addTo(map);
+        }
+        
     }
     else if(i==2){
-        var uculPopup = L.popup({minWidth: 500})
-            .setContent("<h2><b>Ucul</b></h2><p>When the current cycle of this world was started, Ucul was used by the gods' as a testing ground for new creatures. This land is wild, untamed and full of unspeakable horrors that are the gods failed experiments. It is a land completely unfit for normal mortal civilizations. However, the curiosity of some races is insatiable and a few daring mortals have begun to attempt colonization of this continent.</p><p>Will their curiosity be their downfall or are they determined enough to tame this treacherous land?</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");           
-        marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})            
-        .bindPopup(uculPopup)
-        .addTo(map);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var uculPopup = L.popup({maxWidth:300})
+                .setContent("<h2><b>Ucul</b></h2><p>When the current cycle of this world was started, Ucul was used by the gods' as a testing ground for new creatures. This land is wild, untamed and full of unspeakable horrors that are the gods failed experiments. It is a land completely unfit for normal mortal civilizations. However, the curiosity of some races is insatiable and a few daring mortals have begun to attempt colonization of this continent.</p><p>Will their curiosity be their downfall or are they determined enough to tame this treacherous land?</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");           
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})            
+                .bindPopup(uculPopup)
+                .addTo(map);
+        }
+        else{
+            var uculPopup = L.popup({minWidth: 500})
+                .setContent("<h2><b>Ucul</b></h2><p>When the current cycle of this world was started, Ucul was used by the gods' as a testing ground for new creatures. This land is wild, untamed and full of unspeakable horrors that are the gods failed experiments. It is a land completely unfit for normal mortal civilizations. However, the curiosity of some races is insatiable and a few daring mortals have begun to attempt colonization of this continent.</p><p>Will their curiosity be their downfall or are they determined enough to tame this treacherous land?</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");           
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})            
+                .bindPopup(uculPopup)
+                .addTo(map);
+        }
+        
     }
     else if(i==3){
-        var isleOfDestinyPopup = L.popup({minWidth: 500})
-            .setContent("<h2><b>The Isle of Destiny</b></h2><p>Etune the Goddess of Destiny has gathered a large organization of followers known as The Assembly of the Everknowing Mistress to protect the destinies of the races of Abhoren. The Isle of Destiny is the main gathering point of the Assembly and home to their leader, The Whisper of the Mistress. The Assembly of the Everknowing Mistress keeps knowledge of this land a secret and all outsiders off of this land. Only maps created by the Assembly have the Isle of Destiny depicted.</p> <p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
-        marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
-        .bindPopup(isleOfDestinyPopup)
-        .addTo(map);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var isleOfDestinyPopup = L.popup({maxWidth: 300})
+                .setContent("<h2><b>The Isle of Destiny</b></h2><p>Etune the Goddess of Destiny has gathered a large organization of followers known as The Assembly of the Everknowing Mistress to protect the destinies of the races of Abhoren. The Isle of Destiny is the main gathering point of the Assembly and home to their leader, The Whisper of the Mistress. The Assembly of the Everknowing Mistress keeps knowledge of this land a secret and all outsiders off of this land. Only maps created by the Assembly have the Isle of Destiny depicted.</p> <p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(isleOfDestinyPopup)
+                .addTo(map);
+        }
+        else{
+            var isleOfDestinyPopup = L.popup({minWidth: 500})
+                .setContent("<h2><b>The Isle of Destiny</b></h2><p>Etune the Goddess of Destiny has gathered a large organization of followers known as The Assembly of the Everknowing Mistress to protect the destinies of the races of Abhoren. The Isle of Destiny is the main gathering point of the Assembly and home to their leader, The Whisper of the Mistress. The Assembly of the Everknowing Mistress keeps knowledge of this land a secret and all outsiders off of this land. Only maps created by the Assembly have the Isle of Destiny depicted.</p> <p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(isleOfDestinyPopup)
+                .addTo(map);
+        }
+        
     }
     else if(i==4){
-        var iogosPopup = L.popup({minWidth: 500})
-            .setContent("<h2><b>Iogos</b></h2><p>Iogos is a land with the most radical changes in geography. The major mountain ranges act as borders containing different climates. The westernmost part of the land is covered in fertile grassland, rivers, and the occasional forest. This part of Iogos is mostly inhabited by a civilization known for their agricultural expertise. They are the breadbasket of Abhoren, supplying food throughout the kingdoms. The central part of Iogos is covered in a desert with temperatures making it inhabitable except for the Lizardfolk who find the hot temperatures to be ideal because of their cold-blooded biology. Few Lizardfolk venture outside of the comfort of the desert. The Eastern part of Iogos is covered in dense forest home to a massive population of Foeden and other creatures of nature. The large mountain ranges are home to many a Mynyden kingdom and the occasional wandering tribe of giant Gol.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
-        marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})            
-        .bindPopup(iogosPopup)
-        .addTo(map);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var iogosPopup = L.popup({maxWidth: 300})
+                .setContent("<h2><b>Iogos</b></h2><p>Iogos is a land with the most radical changes in geography. The major mountain ranges act as borders containing different climates. The westernmost part of the land is covered in fertile grassland, rivers, and the occasional forest. This part of Iogos is mostly inhabited by a civilization known for their agricultural expertise. They are the breadbasket of Abhoren, supplying food throughout the kingdoms. The central part of Iogos is covered in a desert with temperatures making it inhabitable except for the Lizardfolk who find the hot temperatures to be ideal because of their cold-blooded biology. Few Lizardfolk venture outside of the comfort of the desert. The Eastern part of Iogos is covered in dense forest home to a massive population of Foeden and other creatures of nature. The large mountain ranges are home to many a Mynyden kingdom and the occasional wandering tribe of giant Gol.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})            
+                .bindPopup(iogosPopup)
+                .addTo(map);
+        }
+        else{
+            var iogosPopup = L.popup({minWidth: 500})
+                .setContent("<h2><b>Iogos</b></h2><p>Iogos is a land with the most radical changes in geography. The major mountain ranges act as borders containing different climates. The westernmost part of the land is covered in fertile grassland, rivers, and the occasional forest. This part of Iogos is mostly inhabited by a civilization known for their agricultural expertise. They are the breadbasket of Abhoren, supplying food throughout the kingdoms. The central part of Iogos is covered in a desert with temperatures making it inhabitable except for the Lizardfolk who find the hot temperatures to be ideal because of their cold-blooded biology. Few Lizardfolk venture outside of the comfort of the desert. The Eastern part of Iogos is covered in dense forest home to a massive population of Foeden and other creatures of nature. The large mountain ranges are home to many a Mynyden kingdom and the occasional wandering tribe of giant Gol.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})            
+                .bindPopup(iogosPopup)
+                .addTo(map);
+        }
+
     }
     else if(i==5){
-        var preloraPopup = L.popup({minWidth: 500})  
-            .setContent("<h2><b>Prelora</b></h2><p>The southern half of Prelora is covered in a frozen tundra inhabited by nomadic tribes of the Gol. The northern half of Prelora is inhabited by a single kingdom. This kingdom is one of the most diverse kingdoms in Abhoren. The mortal races of Prelora have put aside their usual quarrels and feuds and banded together. Their diversity is one of necessity as their combined knowledge and skills are needed to fend off the Gol whenever a tribe decides to move North and pillage the land.</p><p>There are times where the Savage Races have not attacked in many generations. During these times the relations between the mortal races begin to fray as the absence of a common enemy causes unrest among those that would not naturally live together. The occasional skirmish will break out as a faction of either Syffren or Mynyden, the most restless and quick-tempered of these races, attempts to wrest control of a city and establish their own 'pure' city.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");              
-        marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
-        .bindPopup(preloraPopup)
-        .addTo(map);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var preloraPopup = L.popup({maxWidth: 300})  
+                .setContent("<h2><b>Prelora</b></h2><p>The southern half of Prelora is covered in a frozen tundra inhabited by nomadic tribes of the Gol. The northern half of Prelora is inhabited by a single kingdom. This kingdom is one of the most diverse kingdoms in Abhoren. The mortal races of Prelora have put aside their usual quarrels and feuds and banded together. Their diversity is one of necessity as their combined knowledge and skills are needed to fend off the Gol whenever a tribe decides to move North and pillage the land.</p><p>There are times where the Savage Races have not attacked in many generations. During these times the relations between the mortal races begin to fray as the absence of a common enemy causes unrest among those that would not naturally live together. The occasional skirmish will break out as a faction of either Syffren or Mynyden, the most restless and quick-tempered of these races, attempts to wrest control of a city and establish their own 'pure' city.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");              
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(preloraPopup)
+                .addTo(map);
+        }
+        else{
+            var preloraPopup = L.popup({minWidth: 500})  
+                .setContent("<h2><b>Prelora</b></h2><p>The southern half of Prelora is covered in a frozen tundra inhabited by nomadic tribes of the Gol. The northern half of Prelora is inhabited by a single kingdom. This kingdom is one of the most diverse kingdoms in Abhoren. The mortal races of Prelora have put aside their usual quarrels and feuds and banded together. Their diversity is one of necessity as their combined knowledge and skills are needed to fend off the Gol whenever a tribe decides to move North and pillage the land.</p><p>There are times where the Savage Races have not attacked in many generations. During these times the relations between the mortal races begin to fray as the absence of a common enemy causes unrest among those that would not naturally live together. The occasional skirmish will break out as a faction of either Syffren or Mynyden, the most restless and quick-tempered of these races, attempts to wrest control of a city and establish their own 'pure' city.</p><p><br>**In the future a more in-depth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");              
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(preloraPopup)
+                .addTo(map);
+        }
+        
     }
     else if(i==6){
-        var isleOfAscencionPopup = L.popup({minWidth: 500})  
-            .setContent("<h2><b>The Isle of Ascension</b></h2><p>Almost nothing is known about this tiny island. What is known is this:<ul> <li>this land lies somewhere between the mortal realm(Abhoren) and the divine realm of the gods</li><li>only a god or a mortal on the path to godhood is able to step foot on this island</li><li>it is the only location to remain the same when the gods wipe the world to begin a new cycle</li></ul></p><p>Perhaps there will come a time when a god grants the mortals knowledge of the geography of the Isle of Ascension.</p><p><br>**In the future a more indepth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");              
-        marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
-        .bindPopup(isleOfAscencionPopup)
-        .addTo(map);
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var isleOfAscencionPopup = L.popup({maxWidth: 300})  
+                .setContent("<h2><b>The Isle of Ascension</b></h2><p>Almost nothing is known about this tiny island. What is known is this:<ul> <li>this land lies somewhere between the mortal realm(Abhoren) and the divine realm of the gods</li><li>only a god or a mortal on the path to godhood is able to step foot on this island</li><li>it is the only location to remain the same when the gods wipe the world to begin a new cycle</li></ul></p><p>Perhaps there will come a time when a god grants the mortals knowledge of the geography of the Isle of Ascension.</p><p><br>**In the future a more indepth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");              
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(isleOfAscencionPopup)
+                .addTo(map);
+        }
+        else{
+            var isleOfAscencionPopup = L.popup({minWidth: 500})  
+                .setContent("<h2><b>The Isle of Ascension</b></h2><p>Almost nothing is known about this tiny island. What is known is this:<ul> <li>this land lies somewhere between the mortal realm(Abhoren) and the divine realm of the gods</li><li>only a god or a mortal on the path to godhood is able to step foot on this island</li><li>it is the only location to remain the same when the gods wipe the world to begin a new cycle</li></ul></p><p>Perhaps there will come a time when a god grants the mortals knowledge of the geography of the Isle of Ascension.</p><p><br>**In the future a more indepth map, similar to Odea, will be made by the creators of this Abhoren. World building is more time consuming and energy intensive than they originally thought.**</p>");              
+            marker=new L.marker([locations[i][1],locations[i][2]],{icon:contIcon})
+                .bindPopup(isleOfAscencionPopup)
+                .addTo(map);
+        }
+
     }
     //marker.on('click',(e)=> {this.popitup(e)});
     markers.push(marker);

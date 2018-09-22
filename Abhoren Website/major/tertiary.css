@@ -36,7 +36,6 @@ html, body, #map {
     #sidebar-left, #sidebar-right{
         background-color:#ffdead;
         color: black;
-        width:30%;
     }
     #sidebar-right{
         position:left;

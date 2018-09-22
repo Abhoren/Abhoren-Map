@@ -64,4 +64,8 @@ button:hover{
         border-color:#8B4513;
         border-width:1px;
     }
+    .information-popup .leaflet-popup-content-wrapper{
+        font-size:50%;
+        width:150px;
+    }
 }

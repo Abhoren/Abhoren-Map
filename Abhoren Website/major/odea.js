@@ -260,11 +260,14 @@ function onMapClick(e) {
         sidebar.toggle();
     }
 }
-var sidebar = L.control.sidebar('sidebar', {
-    closeButton: true,
-    position: 'left'
-});
-map.addControl(sidebar);
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var sidebar = L.control.sidebar('sidebar', {closeButton: true,position: 'left', maxWidth: 200});
+    map.addControl(sidebar);
+}
+else{
+    var sidebar = L.control.sidebar('sidebar', {closeButton: true,position: 'left', maxWidth: 460});
+    map.addControl(sidebar);
+}
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     var projectInformationPopup = L.popup({maxHeight: 300, minWidth: 100, maxWidth: 200, className: "information-popup"})       
     .setLatLng([-50,0])
